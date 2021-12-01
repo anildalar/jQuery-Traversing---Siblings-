@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                border:10px solid red;
+                padding:10px;
+            }
+            p{
+                border:10px solid blue;
+                padding:10px;
+            }
+            h1{
+                border:10px solid purple;
+                padding:10px;
+            }
+            h2{
+                border:10px solid orangered;
+                padding:10px;
+            }
+            span{
+                display:block;
+                border:10px solid green;
+                padding:10px;
+            }
+            
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            //Check for page Load event
+
+            //1. ()(); 
+            //2. $(document).ready(); 100% Page
+            //3. jQuery()
+            /* jQuery(function($){
+                //alert('okokoko');
+                //$(selector).action();
+                //$('h2').siblings().css({ "color":"blue","font-size":"5em" });
+            }); */
+
+            $(document).ready(function($){
+                $('h1').css({ "color": "red", "border": "2px solid red"}).nextAll().css({ "color": "red", "border": "2px solid red"}).prevAll().css({ "color": "red", "border": "2px solid red"}); //function chaining   a().b().c().d().e()
+            });
+            /* (function($){
+                
+            })(jQuery); */
+
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <p>P1</p>
+            <p>P2</p>
+            <p>P3</p>
+            <p>P4</p>
+            <h1>H1</h1>
+            <p>P5</p>
+            <h2>H2</h2>
+            <span>Span</span>
+        </div>
+    </body>
+</html>
